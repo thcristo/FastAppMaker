@@ -1,6 +1,6 @@
-﻿/// <binding BeforeBuild='compile-less' />
+﻿/// <binding />
 
-
+/*
 var gulp = require('gulp');
 var gulpLess = require('gulp-less');
 gulp.task('compile-less', function () {
@@ -9,4 +9,6 @@ gulp.task('compile-less', function () {
     gulp.src('./wwwroot/lib/bootstrap/fonts/**.*')
         .pipe(gulp.dest('./wwwroot/fonts'));
 });
+*/
+
 
