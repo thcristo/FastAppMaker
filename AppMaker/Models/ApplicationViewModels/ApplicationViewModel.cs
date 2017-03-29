@@ -7,7 +7,7 @@ namespace AppMaker.Models.ApplicationViewModels
 {
     public class ApplicationViewModel
     {
-        public string Title { get; internal set; }
-        public string ShortTitle { get; internal set; }
+        public string Title { get; set; }
+        public string ShortTitle { get; set; }
     }
 }
