@@ -10,6 +10,7 @@ namespace AppMaker.Services
 {
     public interface IApplicationService
     {
-        Task<ApplicationViewModel> GetApplicationForUser(ClaimsPrincipal user);
+        string Title { get; }
+        string ShortTitle { get; }
     }
 }

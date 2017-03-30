@@ -12,6 +12,7 @@ using Microsoft.Extensions.Logging;
 using AppMaker.Data;
 using AppMaker.Models;
 using AppMaker.Services;
+using AppMaker.Models.Options;
 
 namespace AppMaker
 {
@@ -48,6 +49,8 @@ namespace AppMaker
                 .AddDefaultTokenProviders();
 
             services.AddMvc();
+            services.AddOptions();
+            services.Configure<AppOptions>(Configuration.GetSection("AppOptions"));
 
             // Add application services.
             services.AddTransient<IEmailSender, AuthMessageSender>();

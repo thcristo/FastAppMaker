@@ -6,24 +6,37 @@ using AppMaker.Models;
 using AppMaker.Models.ApplicationViewModels;
 using System.Security.Claims;
 using Microsoft.AspNetCore.Identity;
+using AppMaker.Models.Domain;
+using Microsoft.Extensions.Options;
+using AppMaker.Models.Options;
 
 namespace AppMaker.Services
 {
     public class ApplicationService : IApplicationService
     {
-        private readonly UserManager<ApplicationUser> _userManager;
+        private readonly SignInManager<ApplicationUser> _signInManager;
+        private readonly ApplicationContext _appContext;
+        private readonly AppOptions _options;
 
-        public ApplicationService(UserManager<ApplicationUser> userManager)
+        public ApplicationService(SignInManager<ApplicationUser> signInManager, IOptionsSnapshot<AppOptions> options)
         {
-            _userManager = userManager;
+            _signInManager = signInManager;
+            _options = options.Value;
         }
-        public async Task<ApplicationViewModel> GetApplicationForUser(ClaimsPrincipal user)
+        public string Title
         {
-            return new ApplicationViewModel
+            get
             {
-                Title = "My App Maker",
-                ShortTitle = "A"
-            };
+                return _options.Title;
+            }
+        }
+
+        public string ShortTitle
+        {
+            get
+            {
+                return _options.ShortTitle;
+            }
         }
     }
 }

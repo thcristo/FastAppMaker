@@ -1,9 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.26228.9
+VisualStudioVersion = 15.0.26228.10
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AppMaker", "AppMaker\AppMaker.csproj", "{A5C766F5-349C-4E47-AF11-712C8764A87A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AppMaker.Data", "AppMaker.Data\AppMaker.Data.csproj", "{8E87568E-1F8F-419B-81B2-3EA77F5429C0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{A5C766F5-349C-4E47-AF11-712C8764A87A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A5C766F5-349C-4E47-AF11-712C8764A87A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A5C766F5-349C-4E47-AF11-712C8764A87A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8E87568E-1F8F-419B-81B2-3EA77F5429C0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8E87568E-1F8F-419B-81B2-3EA77F5429C0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8E87568E-1F8F-419B-81B2-3EA77F5429C0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8E87568E-1F8F-419B-81B2-3EA77F5429C0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
