@@ -9,6 +9,7 @@ using Microsoft.AspNetCore.Identity;
 using AppMaker.Models.Domain;
 using Microsoft.Extensions.Options;
 using AppMaker.Models.Options;
+using AppMaker.Data.Models;
 
 namespace AppMaker.Services
 {

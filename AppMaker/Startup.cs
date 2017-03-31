@@ -4,8 +4,6 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
@@ -13,6 +11,8 @@ using AppMaker.Data;
 using AppMaker.Models;
 using AppMaker.Services;
 using AppMaker.Models.Options;
+using AppMaker.Data.Models;
+using MR.AspNet.Identity.EntityFramework6;
 
 namespace AppMaker
 {
@@ -41,10 +41,8 @@ namespace AppMaker
         public void ConfigureServices(IServiceCollection services)
         {
             // Add framework services.
-            services.AddDbContext<ApplicationDbContext>(options =>
-                options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
-
-            services.AddIdentity<ApplicationUser, IdentityRole>()
+            services.AddScoped<ApplicationDbContext>(_ => new ApplicationDbContext(Configuration.GetConnectionString("DefaultConnection")));
+            services.AddIdentity<ApplicationUser, ApplicationRole>()
                 .AddEntityFrameworkStores<ApplicationDbContext>()
                 .AddDefaultTokenProviders();
 
@@ -68,7 +66,6 @@ namespace AppMaker
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
-                app.UseDatabaseErrorPage();
                 app.UseBrowserLink();
             }
             else

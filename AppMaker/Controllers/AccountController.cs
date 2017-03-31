@@ -12,6 +12,7 @@ using Microsoft.Extensions.Options;
 using AppMaker.Models;
 using AppMaker.Models.AccountViewModels;
 using AppMaker.Services;
+using AppMaker.Data.Models;
 
 namespace AppMaker.Controllers
 {
