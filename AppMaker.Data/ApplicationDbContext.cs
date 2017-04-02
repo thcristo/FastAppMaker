@@ -14,5 +14,7 @@ namespace AppMaker.Data
         public ApplicationDbContext(string connectionString) : base(connectionString)
 		{
         }
+
+        public DbSet<NavigationMenu> NavigationMenus { get; set; }
     }
 }
