@@ -18,6 +18,6 @@ namespace AppMaker.Data.Models
         public int RelativeOrder { get; set; }
         public int MenuId { get; set; }
         [Required,ForeignKey("MenuId")]
-        public NavigationMenu Menu { get; set; }
+        public virtual NavigationMenu Menu { get; set; }
     }
 }

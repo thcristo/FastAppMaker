@@ -1,6 +1,8 @@
 namespace AppMaker.Data.Migrations
 {
+    using AppMaker.Data.Models;
     using System;
+    using System.Collections.Generic;
     using System.Data.Entity;
     using System.Data.Entity.Migrations;
     using System.Linq;
@@ -14,18 +16,17 @@ namespace AppMaker.Data.Migrations
 
         protected override void Seed(AppMaker.Data.ApplicationDbContext context)
         {
-            //  This method will be called after migrating to the latest version.
-
-            //  You can use the DbSet<T>.AddOrUpdate() helper extension method 
-            //  to avoid creating duplicate seed data. E.g.
-            //
-            //    context.People.AddOrUpdate(
-            //      p => p.FullName,
-            //      new Person { FullName = "Andrew Peters" },
-            //      new Person { FullName = "Brice Lambson" },
-            //      new Person { FullName = "Rowan Miller" }
-            //    );
-            //
+            context.NavigationMenus.AddOrUpdate(menu => menu.Caption,
+                new NavigationMenu
+                {
+                    Caption = "Administration",
+                    RelativeOrder = int.MaxValue,
+                    Links = new List<NavigationLink>
+                    {
+                        new NavigationLink { Caption = "Roles", RelativeOrder = 1000},
+                        new NavigationLink { Caption = "Users", RelativeOrder = 2000}
+                    }
+                });
         }
     }
 }

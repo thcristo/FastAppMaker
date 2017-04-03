@@ -1,0 +1,19 @@
+@using AppMaker.Data.Models
+@model IEnumerable<NavigationMenu>
+@foreach (var menu in Model.OrderBy(m => m.RelativeOrder))
+{
+    <li class="treeview">
+        <a href="#">
+            <i class="fa fa-folder"></i><span>@menu.Caption</span>
+            <span class="pull-right-container">
+                <i class="fa fa-angle-left pull-right"></i>
+            </span>
+        </a>
+        <ul class="treeview-menu">
+            @foreach (var link in menu.Links.OrderBy(l => l.RelativeOrder))
+            {
+                <li><a href="#"><i class="fa fa-circle-o"></i>@link.Caption</a></li>
+            }
+        </ul>
+    </li>
+}

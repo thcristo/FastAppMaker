@@ -30,5 +30,8 @@
   <ItemGroup>
     <ProjectReference Include="..\AppMaker.Data\AppMaker.Data.csproj" />
   </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Views\Shared\Components\Sidebar\" />
+  </ItemGroup>
 
 </Project>

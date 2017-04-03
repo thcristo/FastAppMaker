@@ -15,6 +15,6 @@ namespace AppMaker.Data.Models
         public string Caption { get; set; }
         [Required]
         public int RelativeOrder { get; set; }
-        public List<NavigationLink> Links { get; set; }
+        public virtual List<NavigationLink> Links { get; set; }
     }
 }
