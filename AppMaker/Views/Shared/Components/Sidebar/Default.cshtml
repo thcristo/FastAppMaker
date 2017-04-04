@@ -12,7 +12,7 @@
         <ul class="treeview-menu">
             @foreach (var link in menu.Links.OrderBy(l => l.RelativeOrder))
             {
-                <li><a href="#"><i class="fa fa-circle-o"></i>@link.Caption</a></li>
+                <li><a href="@link.RelativeUrl"><i class="fa fa-circle-o"></i>@link.Caption</a></li>
             }
         </ul>
     </li>

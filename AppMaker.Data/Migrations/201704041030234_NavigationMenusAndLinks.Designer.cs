@@ -13,7 +13,7 @@ namespace AppMaker.Data.Migrations
         
         string IMigrationMetadata.Id
         {
-            get { return "201704022044440_NavigationMenusAndLinks"; }
+            get { return "201704041030234_NavigationMenusAndLinks"; }
         }
         
         string IMigrationMetadata.Source

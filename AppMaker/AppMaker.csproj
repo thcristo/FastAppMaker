@@ -31,6 +31,8 @@
     <ProjectReference Include="..\AppMaker.Data\AppMaker.Data.csproj" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="Views\Roles\" />
+    <Folder Include="Views\Users\" />
     <Folder Include="Views\Shared\Components\Sidebar\" />
   </ItemGroup>
 

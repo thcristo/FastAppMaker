@@ -25,6 +25,7 @@ namespace AppMaker.Data.Migrations
                         Caption = c.String(nullable: false, maxLength: 50),
                         RelativeOrder = c.Int(nullable: false),
                         MenuId = c.Int(nullable: false),
+                        RelativeUrl = c.String(nullable: false, maxLength: 100),
                     })
                 .PrimaryKey(t => t.Id)
                 .ForeignKey("dbo.NavigationMenus", t => t.MenuId, cascadeDelete: true)

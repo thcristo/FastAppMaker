@@ -23,8 +23,8 @@ namespace AppMaker.Data.Migrations
                     RelativeOrder = int.MaxValue,
                     Links = new List<NavigationLink>
                     {
-                        new NavigationLink { Caption = "Roles", RelativeOrder = 1000},
-                        new NavigationLink { Caption = "Users", RelativeOrder = 2000}
+                        new NavigationLink { Caption = "Roles", RelativeOrder = 1000, RelativeUrl = "/Roles/Index"},
+                        new NavigationLink { Caption = "Users", RelativeOrder = 2000, RelativeUrl = "/Users/Index"}
                     }
                 });
         }

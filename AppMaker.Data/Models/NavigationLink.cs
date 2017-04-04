@@ -19,5 +19,7 @@ namespace AppMaker.Data.Models
         public int MenuId { get; set; }
         [Required,ForeignKey("MenuId")]
         public virtual NavigationMenu Menu { get; set; }
+        [Required,StringLength(100)]
+        public string RelativeUrl { get; set; }
     }
 }
