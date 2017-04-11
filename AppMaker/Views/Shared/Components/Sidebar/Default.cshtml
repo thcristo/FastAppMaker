@@ -9,10 +9,10 @@
                 <i class="fa fa-angle-left pull-right"></i>
             </span>
         </a>
-        <ul class="treeview-menu">
+        <ul class="treeview-menu nav">
             @foreach (var link in menu.Links.OrderBy(l => l.RelativeOrder))
             {
-                <li><a href="@link.RelativeUrl"><i class="fa fa-circle-o"></i>@link.Caption</a></li>
+                <li><a data-ajax="true" data-ajax-update="#mainContent"  href="@link.RelativeUrl"><i class="fa fa-circle-o"></i>@link.Caption</a></li>
             }
         </ul>
     </li>
