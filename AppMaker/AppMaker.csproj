@@ -8,6 +8,27 @@
   <PropertyGroup>
     <UserSecretsId>aspnet-AppMaker-ce51ef6f-9442-488c-b92a-201c96995516</UserSecretsId>
   </PropertyGroup>
+
+  <ItemGroup>
+    <Content Include="wwwroot\app\app.component.ts" />
+    <Content Include="wwwroot\app\app.module.ts" />
+    <Content Include="wwwroot\app\app.routing.ts" />
+    <Content Include="wwwroot\app\contact.component.ts" />
+    <Content Include="wwwroot\app\index.component.ts" />
+    <Content Include="wwwroot\app\login.component.ts" />
+    <Content Include="wwwroot\app\main.ts" />
+    <Content Include="wwwroot\app\models\ErrorResponse.ts" />
+    <Content Include="wwwroot\app\models\LoginViewModel.ts" />
+    <Content Include="wwwroot\app\models\RegisterViewModel.ts" />
+    <Content Include="wwwroot\app\models\ViewModelResponse.ts" />
+    <Content Include="wwwroot\app\roles.component.ts" />
+    <Content Include="wwwroot\app\rxjs-operators.ts" />
+    <Content Include="wwwroot\app\security\auth-guard.service.ts" />
+    <Content Include="wwwroot\app\security\auth.service.ts" />
+    <Content Include="wwwroot\app\security\OpenIdDictToken.ts" />
+    <Content Include="wwwroot\app\users.component.ts" />
+    <Content Include="wwwroot\system.config.js" />
+  </ItemGroup>
   <ItemGroup>
     <PackageReference Include="BuildBundlerMinifier" Version="2.4.337" />
     <PackageReference Include="EntityFramework" Version="6.1.3" />
@@ -31,8 +52,7 @@
     <ProjectReference Include="..\AppMaker.Data\AppMaker.Data.csproj" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Views\Roles\" />
-    <Folder Include="Views\Users\" />
+    <Folder Include="Views\Partial\" />
     <Folder Include="Views\Shared\Components\Sidebar\" />
   </ItemGroup>
 

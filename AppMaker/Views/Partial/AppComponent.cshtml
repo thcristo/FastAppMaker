@@ -1,0 +1,95 @@
+@using AppMaker.Services
+@using AppMaker.Data.Models
+@inject UserManager<ApplicationUser> UserManager
+@inject IApplicationService AppService
+<div class="wrapper">
+    <header class="main-header">
+        <a asp-controller="Home" asp-action="Index" class="logo">
+            <!-- mini logo for sidebar mini 50x50 pixels -->
+            <span class="logo-mini"><b>@AppService.ShortTitle</b></span>
+            <!-- logo for regular state and mobile devices -->
+            <span class="logo-lg"><b>@AppService.Title</b></span>
+        </a>
+        <nav class="navbar navbar-static-top" role="navigation">
+            <!-- Sidebar toggle button-->
+            <a asp-controller="Home" asp-action="Index" class="sidebar-toggle" data-toggle="offcanvas" role="button">
+                <span class="sr-only">Toggle navigation</span>
+            </a>
+            <!-- Navbar Right Menu -->
+            <div class="navbar-custom-menu">
+                <ul class="nav navbar-nav">
+                    <!-- User Account Menu -->
+                    <li class="dropdown user user-menu">
+                        <!-- Menu Toggle Button -->
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                            <span>@UserManager.GetUserName(User)</span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li class="user-header">
+
+                            </li>
+                            <!-- Menu Body -->
+                            <li class="user-body">
+                            </li>
+                            <!-- Menu Footer-->
+                            <li class="user-footer">
+                                <form asp-area="" asp-controller="Account" asp-action="Logout" method="post" id="logoutForm">
+                                    <div class="pull-left">
+                                        <a asp-controller="Manage" asp-action="Index" class="btn btn-default btn-flat">Profile</a>
+                                    </div>
+                                    <div class="pull-right">
+                                        <button type="submit" class="btn btn-default btn-flat">Sign out</button>
+                                    </div>
+                                </form>
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- Control Sidebar Toggle Button -->
+                    <li>
+                        <a href="#" data-toggle="control-sidebar"><i class="fa fa-gears"></i></a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <aside class="main-sidebar">
+        <!-- sidebar: style can be found in sidebar.less -->
+        <section class="sidebar">
+            <!-- Sidebar Menu -->
+            <ul class="sidebar-menu">
+                @await Component.InvokeAsync("Sidebar")
+            </ul>
+            <!-- /.sidebar-menu -->
+        </section>
+    </aside>
+
+    <div class="content-wrapper">
+        <!-- Content Header (Page header) -->
+        <section class="content-header"></section>
+        <section class="content">
+            <router-outlet></router-outlet>
+        </section>
+    </div>
+
+    <footer class="main-footer">
+        <p>&copy; 2017 - AppMaker</p>
+    </footer>
+
+    <!-- Control Sidebar -->
+    <aside class="control-sidebar control-sidebar-dark">
+        <!-- Create the tabs -->
+        <ul class="nav nav-tabs nav-justified control-sidebar-tabs">
+            <li><a href="#control-sidebar-home-tab" data-toggle="tab"><i class="fa fa-home"></i></a></li>
+        </ul>
+        <!-- Tab panes -->
+        <div class="tab-content">
+            <!-- Home tab content -->
+            <div class="tab-pane" id="control-sidebar-home-tab">
+            </div>
+        </div>
+    </aside>
+    <!-- Add the sidebar's background. This div must be placed
+        immediately after the control sidebar -->
+    <div class="control-sidebar-bg"></div>
+</div>

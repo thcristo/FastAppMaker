@@ -10,5 +10,6 @@ namespace AppMaker.Data.Models
 {
     public class ApplicationUser : IdentityUser, IEntity<string>
     {
+        
     }
 }
