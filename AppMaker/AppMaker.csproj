@@ -13,9 +13,7 @@
     <Content Include="wwwroot\app\app.component.ts" />
     <Content Include="wwwroot\app\app.module.ts" />
     <Content Include="wwwroot\app\app.routing.ts" />
-    <Content Include="wwwroot\app\contact.component.ts" />
     <Content Include="wwwroot\app\index.component.ts" />
-    <Content Include="wwwroot\app\login.component.ts" />
     <Content Include="wwwroot\app\main.ts" />
     <Content Include="wwwroot\app\models\ErrorResponse.ts" />
     <Content Include="wwwroot\app\models\LoginViewModel.ts" />
@@ -36,6 +34,7 @@
     <PackageReference Include="Microsoft.AspNetCore" Version="1.1.1" />
     <PackageReference Include="Microsoft.AspNetCore.Authentication.Cookies" Version="1.1.1" />
     <PackageReference Include="Microsoft.AspNetCore.Mvc" Version="1.1.2" />
+    <PackageReference Include="Microsoft.AspNetCore.SpaServices" Version="1.1.0" />
     <PackageReference Include="Microsoft.AspNetCore.StaticFiles" Version="1.1.1" />
     <PackageReference Include="Microsoft.Extensions.Configuration.UserSecrets" Version="1.1.1" />
     <PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="1.1.1" />

@@ -12,7 +12,7 @@ namespace AppMaker.Controllers
     {
         public IActionResult AppComponent() => PartialView();
         public IActionResult IndexComponent() => PartialView();
-        public IActionResult UsersComponet() => PartialView();
-        public IActionResult RolesComponet() => PartialView();
+        public IActionResult UsersComponent() => PartialView();
+        public IActionResult RolesComponent() => PartialView();
     }
 }

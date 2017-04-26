@@ -14,7 +14,7 @@ import './rxjs-operators';
 @NgModule({
     imports: [BrowserAnimationsModule, BrowserModule, FormsModule, HttpModule, ToastrModule.forRoot(), routing],
     declarations: [AppComponent, routedComponents],
-    providers: [Title, { provide: APP_BASE_HREF, useValue: '/home/index/clientApp' }],
+    providers: [Title, { provide: APP_BASE_HREF, useValue: '/home/index/' }],
     bootstrap: [AppComponent]
 })
 export class AppModule { }

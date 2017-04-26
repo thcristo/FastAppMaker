@@ -50,11 +50,6 @@ namespace AppMaker
                 .AddEntityFrameworkStores<ApplicationDbContext>()
                 .AddDefaultTokenProviders();
 
-            var guestPolicy = new AuthorizationPolicyBuilder()
-                                   .RequireAuthenticatedUser()
-                                   .RequireClaim("scope")
-                                   .Build();
-
             services.AddMvc();
             services.AddOptions();
             services.Configure<AppOptions>(Configuration.GetSection("AppOptions"));
@@ -75,7 +70,7 @@ namespace AppMaker
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
-                //app.UseBrowserLink();
+                app.UseBrowserLink();
             }
             else
             {
@@ -98,8 +93,12 @@ namespace AppMaker
             {
                 routes.MapRoute(
                     name: "default",
-                    template: "{controller=Home}/{action=Index}/{*catchall}");
+                    template: "{controller=Home}/{action=Index}/{id?}");
+
+                routes.MapSpaFallbackRoute("spa-fallback", new { controller = "home", action = "index" });
             });
+
+            
         }
     }
 }

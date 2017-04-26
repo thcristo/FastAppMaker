@@ -25,7 +25,7 @@ AppModule = __decorate([
     core_1.NgModule({
         imports: [animations_1.BrowserAnimationsModule, platform_browser_1.BrowserModule, forms_1.FormsModule, http_1.HttpModule, ngx_toastr_1.ToastrModule.forRoot(), app_routing_1.routing],
         declarations: [app_component_1.AppComponent, app_routing_1.routedComponents],
-        providers: [platform_browser_1.Title, { provide: common_1.APP_BASE_HREF, useValue: '/home/index/clientApp' }],
+        providers: [platform_browser_1.Title, { provide: common_1.APP_BASE_HREF, useValue: '/home/index/' }],
         bootstrap: [app_component_1.AppComponent]
     })
 ], AppModule);
