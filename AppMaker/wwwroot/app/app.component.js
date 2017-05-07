@@ -18,6 +18,9 @@ var AppComponent = (function () {
         this.titleService = titleService;
         this.http = http;
     }
+    AppComponent.prototype.ngOnInit = function () {
+        $.getScript('/lib/admin-lte/dist/js/app.js');
+    };
     // wrapper to the Angular title service.
     AppComponent.prototype.setTitle = function (newTitle) {
         this.titleService.setTitle(newTitle);

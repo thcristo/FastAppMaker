@@ -10,6 +10,13 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="wwwroot\app\security\**" />
+    <Content Remove="wwwroot\app\security\**" />
+    <EmbeddedResource Remove="wwwroot\app\security\**" />
+    <None Remove="wwwroot\app\security\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Content Include="wwwroot\app\app.component.ts" />
     <Content Include="wwwroot\app\app.module.ts" />
     <Content Include="wwwroot\app\app.routing.ts" />
@@ -21,9 +28,6 @@
     <Content Include="wwwroot\app\models\ViewModelResponse.ts" />
     <Content Include="wwwroot\app\roles.component.ts" />
     <Content Include="wwwroot\app\rxjs-operators.ts" />
-    <Content Include="wwwroot\app\security\auth-guard.service.ts" />
-    <Content Include="wwwroot\app\security\auth.service.ts" />
-    <Content Include="wwwroot\app\security\OpenIdDictToken.ts" />
     <Content Include="wwwroot\app\users.component.ts" />
     <Content Include="wwwroot\system.config.js" />
   </ItemGroup>

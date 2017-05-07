@@ -12,7 +12,7 @@
         <ul class="treeview-menu nav">
             @foreach (var link in menu.Links.OrderBy(l => l.RelativeOrder))
             {
-                <li><a data-ajax="true" data-ajax-update="#mainContent"  href="@link.RelativeUrl"><i class="fa fa-circle-o"></i>@link.Caption</a></li>
+                <li><a routerLink="@link.RelativeUrl"><i class="fa fa-circle-o"></i>@link.Caption</a></li>
             }
         </ul>
     </li>
